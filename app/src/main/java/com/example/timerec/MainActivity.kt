@@ -1,47 +1,29 @@
-package com.example.timerec
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.timerec.ui.theme.TimeRecTheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import usuarios.Usuario
+import usuarios.TipoUsuario
+import com.exemplo.pontotrabalho.ui.theme.PontoTrabalhoTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            TimeRecTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            PontoTrabalhoTheme {
+                // Lista de usuários (normalmente viriam de um banco de dados)
+                val usuarios = listOf(
+                    Usuario(1, "João", "joao@email.com", "senha123", TipoUsuario.ADMIN),
+                    Usuario(2, "Maria", "maria@email.com", "senha456", TipoUsuario.COMUM)
+                )
+
+                // Chama a tela de login
+                LoginScreen(usuarios = usuarios) { usuario ->
+                    // Ação após login bem-sucedido
+                    println("Login bem-sucedido! Bem-vindo, ${usuario.nome}")
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TimeRecTheme {
-        Greeting("Android")
     }
 }
