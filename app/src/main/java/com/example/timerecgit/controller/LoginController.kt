@@ -1,6 +1,6 @@
-package com.example.timerec.controller
+package com.example.timerecgit.controller
 
-import com.example.timerecgit.model.Usuario // Importação correta do Usuario
+import com.example.timerecgit.model.Usuario
 
 class LoginController {
     private val usuarios = listOf(

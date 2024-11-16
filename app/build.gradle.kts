@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "com.example.timerecgit"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.timerecgit"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
+
         versionCode = 1
         versionName = "1.0"
 
@@ -50,11 +51,13 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.navigation.compose) // Já configurado no alias
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
+    implementation(platform(libs.androidx.compose.bom)) // BOM para o Compose
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
