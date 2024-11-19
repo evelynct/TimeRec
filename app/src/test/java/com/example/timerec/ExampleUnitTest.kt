@@ -1,4 +1,4 @@
-package com.example.timerecgit
+package com.example.timerec
 
 import org.junit.Test
 

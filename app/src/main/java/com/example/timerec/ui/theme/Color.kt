@@ -1,4 +1,4 @@
-package com.example.timerecgit.ui.theme
+package com.example.timerec.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

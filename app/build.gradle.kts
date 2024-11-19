@@ -1,17 +1,18 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
-    namespace = "com.example.timerecgit"
-    compileSdk = 35
+    namespace = "com.example.timerec"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.timerecgit"
-        minSdk = 24
-        targetSdk = 35
-
+        applicationId = "com.example.timerec"
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -51,13 +52,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.navigation.compose) // Já configurado no alias
-    implementation(libs.navigation.fragment)
-    implementation(libs.navigation.ui)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom)) // BOM para o Compose
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
@@ -69,4 +67,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
 }

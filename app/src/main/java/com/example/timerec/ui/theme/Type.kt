@@ -1,4 +1,4 @@
-package com.example.timerecgit.ui.theme
+package com.example.timerec.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

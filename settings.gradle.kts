@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TimeRec git"
+rootProject.name = "TimeRec"
 include(":app")
  
