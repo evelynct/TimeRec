@@ -1,4 +1,4 @@
-package com.example.timerec.Model
+package com.example.timerec.model
 
 import Clock
 import android.os.Parcelable
@@ -16,6 +16,14 @@ data class User(
     val balance: Int,
     val position: String,
     val matricula: Int,
-    val clocks: List<Clock>
+    var clocks: MutableList<Clock>
+) : Parcelable {
 
-) : Parcelable
+    fun addClock(clock: Clock) {
+        clocks.add(clock)
+    }
+
+    fun removeClock(clock: Clock) {
+        clocks.remove(clock)
+    }
+}

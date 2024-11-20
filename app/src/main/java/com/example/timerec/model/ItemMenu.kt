@@ -1,4 +1,4 @@
-package com.example.timerec.Model
+package com.example.timerec.model
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.timerec"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.timerec"
@@ -70,4 +70,5 @@ dependencies {
 
     implementation(libs.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
+    implementation("androidx.compose.material:material-icons-extended:<version>")
 }

@@ -1,4 +1,4 @@
-package com.example.timerec.View
+package com.example.timerec.view
 
 import androidx.compose.material3.Icon
 import androidx.compose.foundation.clickable
@@ -17,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.timerec.Model.ItemMenu
+import com.example.timerec.model.ItemMenu
 
 @Composable
 fun DrawerHeader(){

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TimeRec</string>
+    <string name="hello">Hey there, </string>
+    <string name="create_account">Create an Account</string>
+    <string name="login">Welcome Back</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>[
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="terms_and_conditions">By checking, you agree with our terms and services.</string>
 </resources>

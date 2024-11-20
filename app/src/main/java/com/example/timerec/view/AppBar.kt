@@ -1,4 +1,4 @@
-package com.example.timerec.View
+package com.example.timerec.view
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu

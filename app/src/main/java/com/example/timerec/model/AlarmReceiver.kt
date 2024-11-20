@@ -1,4 +1,4 @@
-package com.example.timerec.Model
+package com.example.timerec.model
 
 import android.content.BroadcastReceiver
 import android.content.Context

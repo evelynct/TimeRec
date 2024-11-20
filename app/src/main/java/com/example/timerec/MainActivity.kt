@@ -2,11 +2,9 @@ package com.example.timerec
 
 import Clock
 import TypeClock
-import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,8 +18,6 @@ import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
@@ -31,52 +27,32 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.toRoute
-import com.example.timerec.View.Appbar
-import com.example.timerec.View.DetailScreen
-import com.example.timerec.View.DrawerBody
-import com.example.timerec.View.DrawerHeader
-import com.example.timerec.Model.ItemMenu
-import com.example.timerec.View.MainScreen
-import com.example.timerec.Model.Screen
-import com.example.timerec.Model.User
-import com.example.timerec.View.AlarmScreen
-import com.example.timerec.View.HistoryScreen
-import com.example.timerec.View.LoginScreen
-import com.example.timerec.View.PunchClockScreen
+import com.example.timerec.controller.getUserTest
+import com.example.timerec.view.Appbar
+import com.example.timerec.view.DetailScreen
+import com.example.timerec.view.DrawerBody
+import com.example.timerec.view.DrawerHeader
+import com.example.timerec.model.ItemMenu
+import com.example.timerec.view.MainScreen
+import com.example.timerec.model.Screen
+import com.example.timerec.model.User
+import com.example.timerec.view.AlarmScreen
+import com.example.timerec.view.HistoryScreen
+import com.example.timerec.view.LoginScreen
+import com.example.timerec.view.PunchClockScreen
 import com.example.timerec.ui.theme.TimeRecTheme
+import com.example.timerec.view.getFormattedDate
 import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import java.text.SimpleDateFormat
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TimeRecTheme {
-                val usuario = User(
-                    name = "Carlos",
-                    cpf = "123.456.789-10",
-                    age = 20,
-                    pswd = "seloco",
-                    balance = 10,
-                    position = "CEO",
-                    matricula = 7484,
-                    clocks = listOf(
-                        Clock(
-                            id = 1,
-                            time = "12:40",
-                            local = "Office",
-                            type = TypeClock.CLOCKIN,
-                        ),
-                        Clock(
-                            id = 2,
-                            time = "12:50",
-                            local = "Office",
-                            type = TypeClock.CLOCKOUT,
-                        )
-                    )
-                )
+                val usuario = getUserTest()
 
                 val navController = rememberNavController()
                 val drawerState = rememberDrawerState(DrawerValue.Closed)

@@ -1,12 +1,12 @@
-package com.example.timerec.Controller
+package com.example.timerec.controller
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import com.example.timerec.Model.AlarmItem
-import com.example.timerec.Model.AlarmReceiver
-import com.example.timerec.Model.AlarmScheduler
+import com.example.timerec.model.AlarmItem
+import com.example.timerec.model.AlarmReceiver
+import com.example.timerec.model.AlarmScheduler
 import java.time.ZoneId
 
 class AndroidAlarmScheduler(

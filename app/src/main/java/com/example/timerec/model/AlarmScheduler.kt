@@ -1,4 +1,4 @@
-package com.example.timerec.Model
+package com.example.timerec.model
 
 interface AlarmScheduler {
     fun schedule(item: AlarmItem)
